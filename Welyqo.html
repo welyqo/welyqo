@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welyqo — Your Partner in Digital Growth</title>
+<meta name="description" content="Welyqo partners with businesses to build software, automate operations, strengthen digital presence, and unlock sustainable growth through modern technology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="welyqo-ai.css">
+<style>
+/* ===================== TOKENS ===================== */
+:root{
+  --bg:#f7f8fb;
+  --bg-alt:#ffffff;
+  --surface:rgba(255,255,255,0.96);
+  --surface-2:#f3f5f9;
+  --border:rgba(15,23,42,0.07);
+  --border-strong:rgba(37,99,235,0.14);
+  --text:#0f172a;
+  --text-dim:#5b6472;
+  --text-faint:#7a8598;
+  --blue:#2563eb;
+  --purple:#6d4aff;
+  --cyan:#0891b2;
+  --grad: linear-gradient(135deg, var(--blue) 0%, var(--purple) 60%, var(--cyan) 100%);
+  --grad-soft: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(109,74,255,0.06) 55%, rgba(8,145,178,0.06) 100%);
+  --radius: 18px;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --ease: cubic-bezier(.16,.8,.24,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:
+    radial-gradient(circle at top left, rgba(37,99,235,0.06), transparent 22%),
+    radial-gradient(circle at 85% 10%, rgba(8,145,178,0.05), transparent 20%),
+    var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-weight:400;
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+  -webkit-tap-highlight-color:transparent;
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+}
+
+img,svg{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;-webkit-tap-highlight-color:transparent;}
+input,textarea,select{font-family:inherit;font-size:16px;}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px;}
+
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;}
+@media (max-width:720px){.wrap{padding:0 20px;}}
+
+.eyebrow{
+  font-family:var(--font-mono);
+  font-size:12px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--blue);
+  display:inline-flex;align-items:center;gap:8px;
+  margin-bottom:18px;
+  font-weight:600;
+}
+.eyebrow::before{
+  content:'';
+  width:18px;height:2px;
+  background:var(--grad);
+  border-radius:999px;
+}
+
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;letter-spacing:-0.02em;color:var(--text);}
+.grad-text{
+  color:var(--blue);
+  position:relative;
+  display:inline-block;
+}
+.grad-text svg{
+  position:absolute;left:0;bottom:-0.08em;width:100%;height:0.22em;
+  overflow:visible;
+}
+
+.section{padding:88px 0;position:relative;}
+@media (max-width:720px){.section{padding:56px 0;}}
+.section-head{max-width:700px;margin-bottom:48px;}
+.section-head h2{font-size:clamp(24px,3.5vw,38px);line-height:1.18;margin-bottom:14px;}
+.section-head p{color:var(--text-dim);font-size:15px;max-width:620px;}
+
+.glass{
+  background:var(--surface);
+  border:1px solid var(--border);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-radius:var(--radius);
+  box-shadow:0 10px 30px rgba(15,23,42,0.04);
+}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px 24px;
+  min-height:46px;
+  border-radius:999px;
+  font-size:14.5px;font-weight:600;
+  transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease);
+  white-space:nowrap;
+  touch-action:manipulation;
+}
+.btn-primary{
+  background:var(--grad);
+  color:#ffffff;
+  box-shadow:0 12px 30px -16px rgba(37,99,235,0.35);
+  font-weight:700;
+  text-shadow:none;
+  letter-spacing:0.02em;
+}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 14px 32px -16px rgba(109,74,255,0.32);}
+.btn-ghost{
+  background:var(--surface);
+  border:1px solid var(--border);
+  color:var(--text);
+}
+.btn-ghost:hover{border-color:var(--border-strong);background:var(--surface-2);transform:translateY(-1px);}
+.btn-sm{padding:10px 18px;min-height:38px;font-size:13px;}
+
+@media (max-width:1024px){
+  .hero-inner{gap:44px;}
+  .hero-panel{max-width:420px;margin:0 auto;}
+  .pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:768px){
+  .wrap{padding:0 18px;}
+  .section{padding:56px 0;}
+  .hero{padding-top:110px;padding-bottom:50px;}
+  .hero-inner{gap:30px;}
+  .hero h1{font-size:clamp(30px,7.5vw,44px);} 
+  .hero-actions,.hero-strip{flex-direction:column;}
+  .hero-actions .btn,.hero-strip-item{width:100%;}
+  .hero-strip-item{min-width:0;}
+  .service-card{grid-template-columns:44px 1fr;grid-template-rows:auto auto;row-gap:8px;padding:16px;}
+  .ai-launch{flex-direction:column;align-items:flex-start;}
+  .newsletter{flex-direction:column;align-items:stretch;}
+  .newsletter input,.newsletter button{width:100%;}
+  .lead{padding:28px 20px;}
+  .contact-form{padding:22px;}
+  .footer-top{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:560px){
+  .logo{font-size:17px;}
+  .grad-text{display:inline;}
+  .hero h1{font-size:clamp(28px,8.5vw,38px);} 
+  .hero .sub{font-size:14.5px;margin-bottom:26px;}
+  .hero-actions .btn{width:100%;}
+  .btn{width:100%;}
+  .service-card{grid-template-columns:1fr;gap:8px;padding:16px;}
+  .service-card .service-icon{margin-bottom:4px;}
+  .stack-grid,.pricing-grid{grid-template-columns:1fr;}
+  .vision{padding:44px 20px;}
+  .lead{padding:20px 16px;}
+  .contact-form{padding:18px;}
+  .footer-top{grid-template-columns:1fr;gap:28px;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:14px;}
+  .assistant-panel{width:calc(100vw - 24px);right:12px;bottom:84px;height:clamp(380px,72vh,540px);z-index:999;}
+  .assistant-fab{bottom:20px;right:16px;width:52px;height:52px;z-index:998;}
+  .back-top{bottom:20px;left:16px;width:42px;height:42px;z-index:997;}
+  .assistant-head{padding:12px 14px;}
+  .assistant-body{padding:12px 14px;}
+  .assistant-input{padding:10px;}
+  .assistant-quick{padding:0 10px 8px;}
+  .msg{max-width:92%;font-size:13px;}
+}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease), transform .8s var(--ease);}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+/* ===================== NAV ===================== */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:18px 0;
+  transition:background .4s var(--ease), border-color .4s var(--ease), padding .4s var(--ease), box-shadow .4s var(--ease);
+  border-bottom:1px solid transparent;
+  background:rgba(255,255,255,0.72);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+}
+header.scrolled{
+  background:rgba(255,255,255,0.9);
+  border-bottom:1px solid var(--border);
+  padding:13px 0;
+  box-shadow:0 8px 30px rgba(15,23,42,0.06);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:19px;font-weight:700;color:var(--text);}
+.logo-mark{
+  width:36px;height:36px;border-radius:12px;
+  background:var(--grad);
+  position:relative;
+  flex-shrink:0;
+  box-shadow:0 14px 28px rgba(37,99,235,0.24);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.logo-mark::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, rgba(255,255,255,0.2), transparent 55%);
+  pointer-events:none;
+}
+.logo-mark::after{
+  content:'W';
+  position:relative;
+  z-index:1;
+  color:white;
+  font-size:18px;
+  font-weight:800;
+  letter-spacing:0.02em;
+  font-family:var(--font-display);
+}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none;}
+.nav-links a{
+  font-size:14.5px;color:var(--text-dim);font-weight:600;
+  position:relative;padding:4px 0;
+  transition:color .25s;
+}
+.nav-links a::after{
+  content:'';position:absolute;left:0;bottom:-2px;width:0;height:2px;
+  background:var(--grad);transition:width .3s var(--ease);
+}
+.nav-links a:hover{color:var(--text);}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{display:flex;align-items:center;gap:14px;}
+.nav-toggle{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--border);align-items:center;justify-content:center;background:var(--bg-alt);touch-action:manipulation;}
+.nav-toggle span{display:block;width:16px;height:1.8px;background:var(--text);position:relative;transition:.3s var(--ease);}
+.nav-toggle span::before,.nav-toggle span::after{
+  content:'';display:block;width:16px;height:1.8px;background:var(--text);position:absolute;transition:.3s var(--ease);
+}
+.nav-toggle span::before{top:-5px;}
+.nav-toggle span::after{top:5px;}
+.nav-toggle.open span{background:transparent !important;}
+.nav-toggle.open span::before{transform:rotate(45deg);top:0;}
+.nav-toggle.open span::after{transform:rotate(-45deg);top:0;}
+
+.mobile-cta-item{display:none;width:100%;margin-top:8px;}
+
+@media (max-width:900px){
+  .nav-links{
+    position:fixed;top:68px;left:14px;right:14px;
+    flex-direction:column;align-items:flex-start;gap:2px;
+    background:rgba(255,255,255,0.98);
+    border:1px solid var(--border);border-radius:20px;
+    padding:12px;
+    transform:translateY(-12px);opacity:0;pointer-events:none;
+    transition:.3s var(--ease);
+    box-shadow:0 24px 50px rgba(15,23,42,0.12);
+    max-height:calc(100vh - 90px);
+    overflow-y:auto;
+  }
+  .nav-links.open{transform:translateY(0);opacity:1;pointer-events:auto;}
+  .nav-links li{width:100%;}
+  .nav-links a{display:block;padding:12px 14px;width:100%;font-size:15px;border-radius:10px;}
+  .nav-links a:hover{background:var(--surface-2);}
+  .nav-links a::after{display:none;}
+  .nav-book{display:none;}
+  .nav-toggle{display:flex;}
+  .mobile-cta-item{display:block;}
+  .mobile-cta-item .btn{width:100%;text-align:center;}
+}
+
+/* ===================== HERO ===================== */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  position:relative;
+  padding-top:150px;padding-bottom:90px;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg, rgba(37,99,235,0.06), transparent 45%, rgba(6,182,212,0.06));
+  z-index:0;pointer-events:none;
+}
+.hero-inner{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1.08fr 0.92fr;gap:64px;align-items:center;
+  width:100%;
+}
+@media (max-width:960px){.hero-inner{grid-template-columns:1fr;gap:40px;}}
+.hero-copy{max-width:590px;}
+.hero h1{
+  font-size:clamp(40px,5.2vw,68px);
+  line-height:1.05;
+  letter-spacing:-0.03em;
+  margin-bottom:22px;
+}
+.hero .sub{
+  font-size:clamp(15px,1.4vw,18px);
+  color:var(--text-dim);
+  max-width:500px;margin:0 0 34px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px;}
+.hero-strip{
+  display:flex;gap:14px;flex-wrap:wrap;
+  max-width:560px;
+}
+.hero-strip-item{
+  flex:1;min-width:150px;
+  padding:14px 16px;
+  font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint);
+  letter-spacing:0.01em;
+  background:rgba(255,255,255,0.84);
+  border:1px solid var(--border);
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(15,23,42,0.03);
+}
+.hero-strip-item b{display:block;color:var(--text);font-family:var(--font-body);font-size:13.5px;font-weight:700;margin-bottom:4px;}
+.hero-panel{
+  position:relative;
+  aspect-ratio:1/1.05;
+  border-radius:24px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:0 28px 60px rgba(15,23,42,0.08);
+}
+#hero-canvas{width:100%;height:100%;display:block;border-radius:24px;}
+@media (max-width:960px){.hero-panel{max-width:440px;margin:0 auto;aspect-ratio:1/0.9;}}
+
+/* ===================== SERVICES ===================== */
+.services-grid{display:flex;flex-direction:column;}
+.service-card{
+  display:grid;
+  grid-template-columns:64px 1.3fr 1.7fr 28px;
+  align-items:center;
+  gap:22px;
+  padding:20px 20px;
+  border:1px solid var(--border);
+  border-radius:16px;
+  background:var(--surface);
+  box-shadow:0 8px 18px rgba(15,23,42,0.03);
+  position:relative;
+  transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+}
+.service-card:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(15,23,42,0.06);border-color:var(--border-strong);}
+.service-num{
+  font-family:var(--font-mono);font-size:13px;color:var(--text-faint);
+  transition:color .35s var(--ease);
+}
+.service-card:hover .service-num{color:var(--cyan);}
+.service-card h3{
+  font-size:18px;font-weight:500;
+  display:flex;align-items:center;gap:12px;
+}
+.service-card h3 svg{width:17px;height:17px;stroke:var(--cyan);flex-shrink:0;}
+.service-card p{color:var(--text-dim);font-size:14px;}
+.service-arrow{
+  font-family:var(--font-mono);color:var(--text-faint);font-size:15px;
+  transform:translateX(-6px);opacity:0;transition:.35s var(--ease);
+  justify-self:end;
+}
+.service-card:hover .service-arrow{transform:translateX(0);opacity:1;color:var(--cyan);}
+@media (max-width:720px){
+.service-card{
+  grid-template-columns:44px minmax(0,1fr);
+  grid-template-rows:auto auto;
+  column-gap:14px;
+  row-gap:8px;
+  align-items:start;
+  padding:16px;
+}
+
+.service-num{
+  grid-column:1;
+  grid-row:1;
+  padding-top:3px;
+}
+
+.service-card h3{
+  grid-column:2;
+  grid-row:1;
+  min-width:0;
+  line-height:1.35;
+}
+
+.service-card p{
+  grid-column:2;
+  grid-row:2;
+  min-width:0;
+  width:100%;
+}
+
+.service-arrow{
+  display:none;
+}
+  .service-arrow{display:none;}
+}
+
+/* ===================== AI FEATURES ===================== */
+.ai-features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+@media (max-width:900px){.ai-features-grid{grid-template-columns:1fr;}}
+.ai-feature-card{
+  padding:24px 22px;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:var(--surface);
+  box-shadow:0 8px 20px rgba(15,23,42,0.03);
+}
+.ai-feature-card .icon{
+  width:42px;height:42px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:16px;
+  background:var(--grad-soft);
+  color:var(--blue);
+  font-weight:700;
+}
+.ai-feature-card h3{font-size:18px;margin-bottom:8px;}
+.ai-feature-card p{font-size:14px;color:var(--text-dim);} 
+.ai-launch{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:24px;padding:18px 20px;border:1px solid var(--border);border-radius:16px;background:linear-gradient(135deg, rgba(255,255,255,0.95), rgba(241,245,249,0.95));}
+.ai-launch p{font-size:14px;color:var(--text-dim);margin:0;}
+.ai-launch strong{color:var(--text);font-weight:600;}
+
+/* ===================== WHY ===================== */
+.why-layout{display:grid;grid-template-columns:0.94fr 1.06fr;gap:64px;align-items:center;}
+@media (max-width:900px){.why-layout{grid-template-columns:1fr;gap:42px;}}
+.why-list{display:flex;flex-direction:column;gap:2px;}
+.why-item{
+  display:flex;gap:18px;padding:18px 0;
+  border-top:1px solid var(--border);
+}
+.why-item:last-child{border-bottom:1px solid var(--border);}
+.why-item-mark{
+  font-family:var(--font-mono);font-size:12px;color:var(--blue);flex-shrink:0;padding-top:3px;
+}
+.why-item h4{font-size:16.5px;margin-bottom:6px;}
+.why-item p{color:var(--text-dim);font-size:14px;}
+.why-visual{
+  aspect-ratio:1/1;
+  border-radius:24px;
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:0 20px 44px rgba(15,23,42,0.07);
+}
+.why-visual svg{width:100%;height:100%;}
+
+/* ===================== PROCESS ===================== */
+.process-track{position:relative;padding-top:20px;}
+.process-line{
+  position:absolute;top:38px;left:0;right:0;height:1px;
+  background:linear-gradient(90deg, transparent, var(--border-strong) 8%, var(--border-strong) 92%, transparent);
+}
+.process-line-fill{
+  position:absolute;top:0;left:0;height:1px;width:100%;
+  background:var(--grad);
+  transform-origin:left;
+  transform:scaleX(0);
+  transition:transform 1.4s var(--ease);
+}
+.process-steps{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:16px;
+  position:relative;
+}
+.process-step{position:relative;padding-top:56px;}
+.process-node{
+  position:absolute;top:26px;left:0;
+  width:24px;height:24px;border-radius:50%;
+  background:var(--bg-alt);
+  border:1.5px solid var(--border-strong);
+  display:flex;align-items:center;justify-content:center;
+  z-index:2;
+}
+.process-node::after{content:'';width:7px;height:7px;border-radius:50%;background:var(--grad);}
+.process-step h4{font-size:15px;margin-bottom:6px;}
+.process-step p{font-size:13px;color:var(--text-dim);}
+.process-step .step-tag{font-family:var(--font-mono);font-size:10.5px;color:var(--text-faint);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;display:block;}
+
+@media (max-width:1000px){
+  .process-track{padding-top:10px;padding-left:36px;}
+  .process-line{
+    top:12px;bottom:12px;left:11px;right:auto;width:2px;height:auto;
+    background:var(--border-strong);
+  }
+  .process-line-fill{
+    top:0;left:0;width:2px;height:100%;
+    transform-origin:top;
+    transform:scaleY(0);
+  }
+  .process-steps{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .process-step{padding-top:0;padding-left:12px;}
+  .process-node{top:2px;left:-36px;width:24px;height:24px;}
+}
+
+/* ===================== STACK ===================== */
+.stack-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+}
+@media (max-width:900px){.stack-grid{grid-template-columns:repeat(2,1fr);}}
+.stack-cat{background:var(--surface);padding:20px 20px;border:1px solid var(--border);border-radius:16px;box-shadow:0 8px 18px rgba(15,23,42,0.03);}
+.stack-cat h4{
+  font-family:var(--font-mono);font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:14px;
+}
+.stack-cat ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.stack-cat li{font-size:14px;color:var(--text-dim);}
+
+/* ===================== VISION ===================== */
+.vision{
+  border-radius:24px;
+  padding:76px 56px;
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  border:1px solid var(--border);
+  background:var(--grad-soft);
+  box-shadow:0 16px 44px rgba(15,23,42,0.05);
+}
+@media (max-width:720px){.vision{padding:48px 20px;}}
+.vision blockquote{
+  font-family:var(--font-serif);
+  font-style:italic;
+  font-size:clamp(19px,3.2vw,32px);
+  line-height:1.45;
+  max-width:780px;margin:0 auto;
+  color:var(--text);
+}
+.vision .quote-mark{
+  font-family:var(--font-serif);
+  font-size:68px;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  line-height:1;margin-bottom:4px;display:block;
+}
+
+/* ===================== FAQ ===================== */
+.faq-list{max-width:760px;margin:0 auto;}
+.faq-item{border-top:1px solid var(--border);}
+.faq-item:last-child{border-bottom:1px solid var(--border);}
+.faq-q{
+  width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;
+  padding:24px 4px;text-align:left;
+  font-family:var(--font-display);font-size:16.5px;font-weight:500;color:var(--text);
+}
+.faq-q .plus{
+  flex-shrink:0;width:22px;height:22px;position:relative;
+}
+.faq-q .plus::before,.faq-q .plus::after{
+  content:'';position:absolute;background:var(--cyan);top:50%;left:50%;transform:translate(-50%,-50%);transition:transform .35s var(--ease);
+}
+.faq-q .plus::before{width:12px;height:1.5px;}
+.faq-q .plus::after{width:1.5px;height:12px;}
+.faq-item.open .plus::after{transform:translate(-50%,-50%) rotate(90deg) scaleY(0);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease);}
+.faq-a p{padding:0 4px 24px;color:var(--text-dim);font-size:14.5px;max-width:640px;}
+
+/* ===================== PRICING ===================== */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch;}
+@media (max-width:900px){.pricing-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto;}}
+.price-card{
+  padding:32px 28px;display:flex;flex-direction:column;position:relative;
+  border:1px solid var(--border);border-radius:20px;background:var(--surface);box-shadow:0 8px 20px rgba(15,23,42,0.03);
+}
+.price-card.featured{
+  border-color:var(--border-strong);
+  background:linear-gradient(180deg, rgba(37,99,235,0.06) 0%, rgba(255,255,255,1) 100%);
+}
+.price-badge{
+  position:absolute;top:-1px;right:24px;transform:translateY(-50%);
+  font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;
+  background:var(--grad);color:#ffffff;padding:6px 12px;border-radius:999px;font-weight:600;
+}
+.price-card h3{font-size:20px;margin-bottom:6px;}
+.price-card .tag{color:var(--text-dim);font-size:14px;margin-bottom:24px;}
+.price-card .price{font-family:var(--font-display);font-size:15px;color:var(--text-dim);margin-bottom:28px;}
+.price-card .price b{font-size:15px;}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px;flex-grow:1;}
+.price-features li{display:flex;gap:10px;font-size:14px;color:var(--text-dim);align-items:flex-start;}
+.price-features li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--grad);margin-top:6px;flex-shrink:0;}
+.pricing-note{
+  text-align:center;margin-top:40px;color:var(--text-dim);font-size:14px;
+  font-family:var(--font-mono);
+}
+
+/* ===================== LEAD GEN ===================== */
+.lead{
+  border-radius:22px;
+  border:1px solid var(--border);
+  padding:48px;
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;
+  background:linear-gradient(135deg, rgba(255,255,255,0.95), rgba(241,245,249,0.95));
+  box-shadow:0 16px 36px rgba(15,23,42,0.05);
+}
+@media (max-width:900px){.lead{grid-template-columns:1fr;padding:36px 24px;}}
+.lead-actions{display:flex;flex-direction:column;gap:14px;margin-top:28px;}
+.lead-action{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:16px 18px;border:1px solid var(--border);border-radius:14px;
+  transition:.3s var(--ease);
+  background:rgba(255,255,255,0.85);
+}
+.lead-action:hover{border-color:var(--cyan);background:var(--surface);transform:translateX(4px);}
+.lead-action span{font-weight:500;font-size:14.5px;}
+.lead-action .arrow{color:var(--cyan);font-family:var(--font-mono);}
+.form-field{margin-bottom:16px;}
+.form-field label{display:block;font-size:12.5px;color:var(--text-dim);margin-bottom:7px;font-family:var(--font-mono);}
+.form-field input,.form-field textarea,.form-field select{
+  width:100%;padding:13px 15px;border-radius:12px;
+  background:rgba(255,255,255,0.9);border:1px solid var(--border);color:var(--text);
+  font-size:14.5px;transition:border-color .25s, box-shadow .25s;
+}
+.form-field input:focus,.form-field textarea:focus,.form-field select:focus{border-color:var(--cyan);box-shadow:0 0 0 4px rgba(6,182,212,0.12);}
+.form-field textarea{resize:vertical;min-height:90px;}
+.newsletter{
+  display:flex;gap:10px;margin-top:36px;padding-top:28px;border-top:1px solid var(--border);
+}
+.newsletter input{flex:1;padding:12px 15px;border-radius:999px;background:rgba(255,255,255,0.9);border:1px solid var(--border);color:var(--text);font-size:14px;}
+
+/* ===================== CONTACT ===================== */
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;}
+@media (max-width:900px){.contact-layout{grid-template-columns:1fr;}}
+.contact-info{display:flex;flex-direction:column;gap:0;}
+.contact-row{
+  display:flex;gap:16px;padding:20px 0;border-top:1px solid var(--border);
+}
+.contact-row:last-child{border-bottom:1px solid var(--border);}
+.contact-row .ic{
+  width:40px;height:40px;border-radius:11px;background:var(--surface);border:1px solid var(--border-strong);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.contact-row .ic svg{width:17px;height:17px;stroke:var(--cyan);}
+.contact-row h4{font-size:14px;margin-bottom:3px;}
+.contact-row p{font-size:14px;color:var(--text-dim);}
+.contact-form{padding:32px;border:1px solid var(--border);border-radius:20px;background:var(--surface);box-shadow:0 10px 24px rgba(15,23,42,0.03);}
+
+/* ===================== FOOTER ===================== */
+footer{border-top:1px solid var(--border);padding:64px 0 32px;}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:56px;}
+@media (max-width:800px){.footer-top{grid-template-columns:1fr 1fr;}}
+.footer-brand p{color:var(--text-dim);font-size:14px;margin-top:14px;max-width:280px;}
+.footer-col h5{font-family:var(--font-mono);font-size:11.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-faint);margin-bottom:16px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:11px;}
+.footer-col a{font-size:14px;color:var(--text-dim);transition:color .25s;}
+.footer-col a:hover{color:var(--cyan);}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  padding-top:28px;border-top:1px solid var(--border);
+  font-size:13px;color:var(--text-faint);
+}
+.socials{display:flex;gap:12px;}
+.socials a{
+  width:34px;height:34px;border-radius:9px;border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;transition:.3s var(--ease);
+}
+.socials a:hover{border-color:var(--cyan);transform:translateY(-3px);}
+.socials svg{width:15px;height:15px;stroke:var(--text-dim);}
+
+/* ===================== BACK TO TOP ===================== */
+.back-top{
+  position:fixed;bottom:28px;left:28px;z-index:60;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--bg-alt);border:1px solid var(--border-strong);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transform:translateY(10px);
+  transition:.35s var(--ease);
+}
+.back-top.show{opacity:1;pointer-events:auto;transform:translateY(0);}
+.back-top svg{width:16px;height:16px;stroke:var(--text);}
+
+/* ===================== AI ASSISTANT ===================== */
+.assistant-fab{
+  position:fixed;bottom:28px;right:28px;z-index:80;
+  width:58px;height:58px;border-radius:50%;
+  background:var(--grad);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 34px -8px rgba(139,92,246,0.55);
+  transition:transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.assistant-fab:hover{transform:scale(1.06);box-shadow:0 14px 38px -8px rgba(59,130,246,0.42);}
+.assistant-fab svg{width:24px;height:24px;stroke:#050609;}
+.assistant-panel{
+  position:fixed;bottom:98px;right:28px;z-index:80;
+  width:360px;max-width:calc(100vw - 40px);height:460px;
+  border-radius:22px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(241,245,249,0.95));
+  border:1px solid rgba(148,163,184,0.3);
+  display:flex;flex-direction:column;overflow:hidden;
+  transform:translateY(16px) scale(0.97);opacity:0;pointer-events:none;
+  transition:.3s var(--ease);
+  box-shadow:0 28px 80px -22px rgba(15,23,42,0.5);
+  backdrop-filter:blur(16px);
+}
+.assistant-panel.open{transform:translateY(0) scale(1);opacity:1;pointer-events:auto;}
+.assistant-head{
+  padding:14px 18px;border-bottom:1px solid rgba(148,163,184,0.22);
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+  background:linear-gradient(90deg, rgba(59,130,246,0.08), rgba(139,92,246,0.08));
+}
+.assistant-head .head-left{display:flex;align-items:center;gap:10px;min-width:0;}
+.assistant-head .head-right{display:flex;align-items:center;gap:8px;}
+.assistant-head .dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 8px var(--cyan);flex-shrink:0;}
+.assistant-head h4{font-size:14.5px;}
+.assistant-head p{font-size:11.5px;color:var(--text-faint);font-family:var(--font-mono);}
+.assistant-head .status-pill{font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);background:rgba(59,130,246,0.1);padding:5px 8px;border-radius:999px;border:1px solid rgba(59,130,246,0.16);}
+.assistant-close{
+  width:26px;height:26px;border-radius:50%;
+  background:rgba(15,23,42,0.06);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;line-height:1;color:var(--text-dim);
+  cursor:pointer;transition:background 0.2s, color 0.2s;
+  border:none;
+}
+.assistant-close:hover{background:rgba(15,23,42,0.12);color:var(--text);}
+.assistant-body{flex:1;overflow-y:auto;padding:16px 18px;display:flex;flex-direction:column;gap:12px;}
+.msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:13.5px;line-height:1.5;}
+.msg.bot{background:rgba(255,255,255,0.85);border:1px solid rgba(148,163,184,0.2);align-self:flex-start;border-bottom-left-radius:4px;box-shadow:0 8px 20px rgba(15,23,42,0.03);}
+.msg.user{background:var(--grad);color:#050609;align-self:flex-end;border-bottom-right-radius:4px;font-weight:500;}
+.msg.typing{display:flex;gap:4px;align-self:flex-start;padding:12px 13px;}
+.msg.typing span{width:6px;height:6px;border-radius:50%;background:var(--cyan);display:inline-block;animation:assistantPulse 1s ease-in-out infinite;}
+.msg.typing span:nth-child(2){animation-delay:.15s;}
+.msg.typing span:nth-child(3){animation-delay:.3s;}
+@keyframes assistantPulse{0%,80%,100%{transform:translateY(0);opacity:.45;}40%{transform:translateY(-3px);opacity:1;}}
+.assistant-quick{display:flex;flex-wrap:wrap;gap:7px;padding:0 18px 12px;}
+.qchip{
+  font-size:12px;padding:7px 12px;border-radius:20px;border:1px solid rgba(148,163,184,0.24);color:var(--text-dim);background:rgba(255,255,255,0.75);
+  transition:.25s;
+}
+.qchip:hover{border-color:var(--cyan);color:var(--text);background:rgba(255,255,255,0.95);}
+.assistant-input{display:flex;gap:8px;padding:14px;border-top:1px solid rgba(148,163,184,0.18);background:rgba(255,255,255,0.65);}
+.assistant-input input{flex:1;padding:10px 13px;border-radius:999px;background:rgba(255,255,255,0.9);border:1px solid rgba(148,163,184,0.24);color:var(--text);font-size:13px;}
+.assistant-input input:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(34,211,238,0.16);}
+.assistant-input button{
+  width:38px;height:38px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.assistant-input button svg{width:15px;height:15px;stroke:#050609;}
+
+/* ===================== SMALL BUSINESS SPECIALS ===================== */
+.industry-tabs{display:flex;gap:10px;overflow-x:auto;padding-bottom:12px;margin-bottom:24px;-webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.industry-tabs::-webkit-scrollbar{display:none;}
+.ind-tab{
+  padding:12px 22px;border-radius:999px;border:1px solid var(--border);
+  background:var(--surface);font-size:14px;font-weight:600;color:var(--text-dim);
+  cursor:pointer;white-space:nowrap;transition:all .25s var(--ease);
+}
+.ind-tab.active,.ind-tab:hover{border-color:var(--cyan);color:var(--text);background:var(--surface-2);box-shadow:0 8px 24px rgba(8,145,178,0.14);}
+.industry-card{
+  padding:40px;border-radius:24px;
+  display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;align-items:center;
+}
+@media (max-width:850px){.industry-card{grid-template-columns:1fr;padding:24px;}}
+.ind-title{font-size:24px;margin-bottom:10px;}
+.ind-desc{color:var(--text-dim);font-size:15px;line-height:1.6;margin-bottom:20px;}
+.ind-highlights{list-style:none;display:flex;flex-direction:column;gap:12px;}
+.ind-highlights li{display:flex;gap:12px;font-size:14.5px;color:var(--text);align-items:center;}
+.ind-highlights li span{width:24px;height:24px;border-radius:50%;background:rgba(37,99,235,0.12);color:var(--blue);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0;}
+.ind-visual-box{
+  background:linear-gradient(135deg, rgba(37,99,235,0.06), rgba(8,145,178,0.08));
+  border:1px solid var(--border-strong);border-radius:20px;padding:32px;
+  text-align:center;
+}
+.ind-visual-box h4{font-size:18px;margin-bottom:8px;}
+.ind-visual-box p{font-size:14px;color:var(--text-dim);margin-bottom:20px;}
+
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+@media (max-width:768px){.compare-grid{grid-template-columns:1fr;}}
+.compare-card{padding:32px;border-radius:22px;border:1px solid var(--border);}
+.compare-card.old{background:rgba(239,68,68,0.03);border-color:rgba(239,68,68,0.18);}
+.compare-card.new{background:linear-gradient(180deg, rgba(37,99,235,0.06), rgba(255,255,255,0.98));border-color:var(--border-strong);box-shadow:0 16px 40px rgba(37,99,235,0.08);}
+.compare-head{font-family:var(--font-display);font-size:19px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+.compare-card ul{list-style:none;display:flex;flex-direction:column;gap:14px;}
+.compare-card li{font-size:14.5px;line-height:1.5;color:var(--text-dim);}
+.compare-card.new li{color:var(--text);font-weight:500;}
+</style>
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header id="header">
+  <div class="wrap nav-inner">
+    <a href="#home" class="logo"><span class="logo-mark"></span>Welyqo</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#industries">Solutions</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="mobile-cta-item"><a href="#contact" class="btn btn-primary btn-sm mobile-cta">Book Free Consultation</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary btn-sm nav-book">Book Free Consultation</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">⚡ Simple &amp; Affordable Tech For Small Businesses</div>
+      <h1 class="reveal in">We build your website, apps &amp; AI so you can <span class="grad-text">grow your business<svg viewBox="0 0 200 12" preserveAspectRatio="none"><path d="M2 8c30-6 150-6 196 0" stroke="url(#underline-grad)" stroke-width="3" fill="none" stroke-linecap="round"/><defs><linearGradient id="underline-grad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#3B82F6"/><stop offset="55%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#22D3EE"/></linearGradient></defs></svg></span></h1>
+      <p class="sub reveal in">No coding skills, no tech headaches, no hidden fees. Welyqo builds your online store, mobile app, and 24/7 AI lead assistant in 7 to 14 days — 100% managed for you.</p>
+      <div class="hero-actions reveal in">
+        <a href="#contact" class="btn btn-primary">Book Free 15-Min Call</a>
+        <a href="#pricing" class="btn btn-ghost">See Small Business Plans</a>
+      </div>
+      <div class="hero-strip reveal in">
+        <div class="hero-strip-item"><b>Ready in 7–14 Days</b>Quick turnaround so you see results fast</div>
+        <div class="hero-strip-item"><b>100% Managed For You</b>We handle hosting, security &amp; updates</div>
+        <div class="hero-strip-item"><b>Clear Fixed Pricing</b>Budget-friendly packages for small business</div>
+      </div>
+    </div>
+    <div class="hero-panel glass reveal in">
+      <canvas id="hero-canvas"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SMALL BUSINESS INDUSTRIES ===================== -->
+<section class="section" id="industries">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Built For Small Businesses</div>
+      <h2>Tailored digital tools for your exact business type</h2>
+      <p>Click your industry below to see how Welyqo helps businesses like yours get more customers and save hours every week.</p>
+    </div>
+    <div class="industry-tabs reveal" id="industryTabs"></div>
+    <div class="industry-card glass reveal" id="industryDisplay"></div>
+  </div>
+</section>
+
+<!-- ===================== BEFORE VS AFTER ===================== -->
+<section class="section" id="comparison">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin:0 auto 48px;text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">The Welyqo Advantage</div>
+      <h2>Stop losing customers to outdated technology</h2>
+    </div>
+    <div class="compare-grid reveal">
+      <div class="compare-card old">
+        <div class="compare-head">❌ Without Welyqo</div>
+        <ul>
+          <li>Losing customer inquiries after business hours</li>
+          <li>Manual paper invoicing &amp; stock tracking errors</li>
+          <li>Outdated, slow website that looks bad on phones</li>
+          <li>Paying 5 different expensive tools every month</li>
+          <li>Hiring freelancers who disappear when bugs happen</li>
+        </ul>
+      </div>
+      <div class="compare-card new">
+        <div class="compare-head">✅ With Welyqo</div>
+        <ul>
+          <li>24/7 AI Customer Assistant captures leads while you sleep</li>
+          <li>1-click automated billing, inventory &amp; WhatsApp receipts</li>
+          <li>Fast, ultra-modern website optimized for Google rankings</li>
+          <li>1 simple connected partner managing all your tech</li>
+          <li>100% ongoing support &amp; training for your entire team</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">What We Do</div>
+      <h2>Simple, powerful solutions for your growing business</h2>
+      <p>Everything your business needs to get found, attract customers, and automate daily tasks — all under one affordable roof.</p>
+    </div>
+    <div class="services-grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== AI FEATURES ===================== -->
+<section class="section" id="ai">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">AI Features</div>
+      <h2>Turn AI into a practical growth engine</h2>
+      <p>From strategy support to workflow automation, our AI layer helps teams move faster without sacrificing clarity or quality.</p>
+    </div>
+    <div class="ai-features-grid">
+      <div class="ai-feature-card reveal">
+        <div class="icon">01</div>
+        <h3>Smart Discovery</h3>
+        <p>Summarize goals, map priorities, and uncover gaps in your current workflow with guided AI support.</p>
+      </div>
+      <div class="ai-feature-card reveal">
+        <div class="icon">02</div>
+        <h3>Workflow Automation</h3>
+        <p>Automate repetitive tasks, improve handoffs, and connect your tools so your team can focus on execution.</p>
+      </div>
+      <div class="ai-feature-card reveal">
+        <div class="icon">03</div>
+        <h3>Decision Intelligence</h3>
+        <p>Use AI insights to support better planning, forecasting, and customer experience decisions at every stage.</p>
+      </div>
+    </div>
+    <div class="ai-launch reveal">
+      <p><strong>Want to try it now?</strong> Click the floating AI button in the bottom-right corner to launch the assistant and ask anything about services, pricing, or next steps.</p>
+      <button class="btn btn-primary" type="button" id="launchAi">Open AI Assistant</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY ===================== -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Why Welyqo</div>
+      <h2>One partner, not a stack of vendors</h2>
+    </div>
+    <div class="why-layout">
+      <div class="why-list reveal">
+        <div class="why-item">
+          <span class="why-item-mark">→</span>
+          <div><h4>End-to-End Technology Partner</h4><p>Software, AI, marketing, and cloud handled under a single accountable team — not five agencies to coordinate.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="why-item-mark">→</span>
+          <div><h4>Business-Focused Solutions</h4><p>We start from your growth targets and revenue model, then work backward to the right technology.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="why-item-mark">→</span>
+          <div><h4>AI-Driven Innovation</h4><p>Automation and intelligence are built into every engagement, not bolted on as an afterthought.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="why-item-mark">→</span>
+          <div><h4>Agile &amp; Transparent Process</h4><p>Short cycles, visible progress, and direct access to the people building your product.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="why-item-mark">→</span>
+          <div><h4>Scalable Architecture</h4><p>Every system is designed for the business you're becoming, not just the one you are today.</p></div>
+        </div>
+        <div class="why-item">
+          <span class="why-item-mark">→</span>
+          <div><h4>Long-Term Support &amp; Maintenance</h4><p>Launch is the beginning of the relationship — we stay on to monitor, improve, and evolve.</p></div>
+        </div>
+      </div>
+      <div class="why-visual glass reveal" id="whyVisual"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROCESS ===================== -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Our Process</div>
+      <h2>A connected path from idea to ongoing growth</h2>
+      <p>Every engagement moves through the same disciplined sequence — so nothing gets lost between strategy and shipped software.</p>
+    </div>
+    <div class="process-track reveal" id="processTrack">
+      <div class="process-line"><div class="process-line-fill" id="processFill"></div></div>
+      <div class="process-steps" id="processSteps"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STACK ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Technology Stack</div>
+      <h2>Modern tools, chosen for the problem — not the trend</h2>
+    </div>
+    <div class="stack-grid reveal" id="stackGrid"></div>
+  </div>
+</section>
+
+<!-- ===================== VISION ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="vision reveal">
+      <span class="quote-mark">"</span>
+      <blockquote>We believe every business deserves enterprise-grade technology, regardless of its size. Our mission is to become a long-term technology partner that helps businesses innovate, automate, and grow with confidence.</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">FAQ</div>
+      <h2>Questions before you reach out</h2>
+    </div>
+    <div class="faq-list reveal" id="faqList"></div>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;">
+      <div class="eyebrow" style="justify-content:center;">Pricing</div>
+      <h2>Plans built around how far you're scaling</h2>
+    </div>
+    <div class="pricing-grid" id="pricingGrid"></div>
+    <p class="pricing-note reveal">Every business is unique. Final pricing is tailored after a free consultation.</p>
+  </div>
+</section>
+
+<!-- ===================== LEAD GEN ===================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="lead reveal">
+      <div>
+        <div class="eyebrow">Get Started</div>
+        <h2 style="font-size:28px;margin-bottom:14px;">Not sure where to start? Pick your next step.</h2>
+        <p style="color:var(--text-dim);font-size:14.5px;">Every path leads to a conversation with our team — choose the one that matches where you are right now.</p>
+        <div class="lead-actions">
+          <a href="#contact" class="lead-action"><span>Book a free consultation</span><span class="arrow">→</span></a>
+          <a href="#contact" class="lead-action"><span>Request a proposal</span><span class="arrow">→</span></a>
+          <a href="#contact" class="lead-action"><span>Get a custom quote</span><span class="arrow">→</span></a>
+        </div>
+        <form class="newsletter" onsubmit="event.preventDefault(); this.reset(); alert('Subscribed. Welcome to Welyqo.');">
+          <input type="email" placeholder="you@company.com" required aria-label="Email for newsletter">
+          <button class="btn btn-primary btn-sm" type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="glass" style="padding:32px;">
+        <h3 style="font-size:17px;margin-bottom:20px;">Free Consultation</h3>
+        <form onsubmit="event.preventDefault(); this.reset(); alert('Thanks — we will be in touch within one business day.');">
+          <div class="form-field"><label>Full name</label><input type="text" required></div>
+          <div class="form-field"><label>Work email</label><input type="email" required></div>
+          <div class="form-field"><label>What are you looking to build?</label><textarea></textarea></div>
+          <button class="btn btn-primary" type="submit" style="width:100%;">Send request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Contact</div>
+      <h2>Let's talk about where you want to go</h2>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-info reveal" id="contactInfo"></div>
+      <div class="contact-form glass reveal">
+        <form onsubmit="event.preventDefault(); this.reset(); alert('Message sent. We will respond shortly.');">
+          <div class="form-field"><label>Full name</label><input type="text" required></div>
+          <div class="form-field"><label>Email</label><input type="email" required></div>
+          <div class="form-field"><label>Company</label><input type="text"></div>
+          <div class="form-field"><label>Message</label><textarea required></textarea></div>
+          <button class="btn btn-primary" type="submit" style="width:100%;">Send message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="logo"><span class="logo-mark"></span>Welyqo</a>
+        <p>A business growth and technology company helping companies scale through software, AI, marketing, and cloud.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Custom Software</a></li>
+          <li><a href="#services">AI Automation</a></li>
+          <li><a href="#services">Digital Marketing</a></li>
+          <li><a href="#services">Cloud Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Welyqo. All rights reserved.</span>
+      <div class="socials" id="socials"></div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== BACK TO TOP ===================== -->
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<!-- ===================== AI ASSISTANT ===================== -->
+<button class="assistant-fab" id="assistantFab" aria-label="Open Welyqo AI">
+  <span class="fab-pulse"></span>
+  <span class="fab-badge"></span>
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 012 2v1h1a2 2 0 012 2v2a2 2 0 01-2 2h-1v1a2 2 0 01-2 2h0a2 2 0 01-2-2v-1H9a2 2 0 01-2-2V7a2 2 0 012-2h1V4a2 2 0 012-2z"/><circle cx="9" cy="16" r="1"/><circle cx="15" cy="16" r="1"/><path d="M4 12H2M22 12h-2"/></svg>
+</button>
+
+<div class="assistant-panel" id="assistantPanel">
+  <div class="assistant-head">
+    <div class="head-left">
+      <div class="head-avatar">AI</div>
+      <div>
+        <h4>Welyqo Concierge</h4>
+        <p>● Online &amp; Ready</p>
+      </div>
+    </div>
+    <div class="head-actions">
+      <button type="button" class="head-btn" id="resetAssistant" title="Reset Chat Memory">🔄</button>
+      <button type="button" class="head-btn" id="closeAssistant" title="Close Panel">&times;</button>
+    </div>
+  </div>
+  <div class="assistant-body" id="assistantBody"></div>
+  <div class="assistant-quick" id="assistantQuick"></div>
+  <form class="assistant-input" id="assistantForm">
+    <input type="text" id="assistantInput" placeholder="Ask anything or click mic…" autocomplete="off">
+    <button type="button" class="mic-btn" id="micBtn" title="Speak your question">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+    </button>
+    <button type="submit" class="send-btn" aria-label="Send">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+    </button>
+  </form>
+</div>
+
+<script src="welyqo-ai.js" defer></script>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---------- NAV ---------- */
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 20);
+  document.getElementById('backTop').classList.toggle('show', window.scrollY > 700);
+});
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', (e) => {
+  e.stopPropagation();
+  navToggle.classList.toggle('open');
+  navLinks.classList.toggle('open');
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navToggle.classList.remove('open');
+  navLinks.classList.remove('open');
+}));
+document.addEventListener('click', (e) => {
+  const header = document.getElementById('header');
+  if (header && !header.contains(e.target) && navLinks.classList.contains('open')) {
+    navToggle.classList.remove('open');
+    navLinks.classList.remove('open');
+  }
+});
+
+document.getElementById('backTop').addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+/* ---------- SCROLL REVEAL ---------- */
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, {threshold:0.15});
+revealEls.forEach(el => io.observe(el));
+
+/* ---------- ICONS ---------- */
+const icons = {
+  code: '<path d="M8 4L2 12l6 8M16 4l6 8-6 8"/>',
+  mobile: '<rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/>',
+  ai: '<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M2 12h3M19 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2"/>',
+  marketing: '<path d="M3 11l18-7-7 18-2-8-9-3z"/>',
+  brand: '<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 010 18M12 3a9 9 0 000 18"/>',
+  cloud: '<path d="M17.5 19a4.5 4.5 0 000-9 6 6 0 00-11.6 1.6A4 4 0 006 19h11.5z"/>',
+  qa: '<path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/>',
+  chat:'<path d="M21 11.5a8.5 8.5 0 01-8.5 8.5 8.4 8.4 0 01-4-1L3 20l1-4.4a8.4 8.4 0 01-1-4A8.5 8.5 0 0111.5 3 8.5 8.5 0 0121 11.5z"/>',
+  cal: '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',
+  mail:'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/>',
+  phone:'<path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.3 1.9.6 2.7a2 2 0 01-.5 2.1L8 9.6a16 16 0 006.4 6.4l1.1-1.1a2 2 0 012.1-.5c.9.3 1.8.5 2.7.6a2 2 0 011.7 2z"/>',
+  wa:'<path d="M20.5 3.5A10.9 10.9 0 0012 0 11 11 0 002 16.3L0 22l5.9-1.9A11 11 0 1020.5 3.5z"/>',
+  pin:'<path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>',
+  clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>'
+};
+function svg(name, size=22){return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" width="${size}" height="${size}">${icons[name]}</svg>`;}
+
+/* ---------- SERVICES ---------- */
+const services = [
+  {icon:'code', title:'Modern Websites & Online Stores', desc:'Fast, mobile-friendly websites designed to convert local visitors into loyal paying customers.'},
+  {icon:'ai', title:'24/7 AI WhatsApp & Web Assistant', desc:'Automatically answer customer inquiries, capture qualified leads, and book calls day or night.'},
+  {icon:'mobile', title:'Custom Business Mobile Apps', desc:'Simple iOS & Android apps to keep your customers engaged and coming back to buy again.'},
+  {icon:'marketing', title:'Google Business & Local Ranking', desc:'Get your business to show up #1 on Google Maps and local searches when customers look for your services.'},
+  {icon:'brand', title:'Billing, Invoicing & Inventory Tools', desc:'Manage your daily sales, customer invoices, and stock effortlessly without complex spreadsheets.'},
+  {icon:'cloud', title:'100% Managed Cloud & Support', desc:'We handle all domain setup, fast servers, security updates, and backups so you never worry about tech issues.'},
+];
+document.getElementById('servicesGrid').innerHTML = services.map((s,i)=>`
+  <div class="service-card">
+    <span class="service-num">0${i+1}</span>
+    <h3>${svg(s.icon,15)}${s.title}</h3>
+    <p>${s.desc}</p>
+    <span class="service-arrow">→</span>
+  </div>`).join('');
+
+/* ---------- INDUSTRY SELECTOR ---------- */
+const industriesData = [
+  {
+    id: 'retail',
+    icon: '🛍️',
+    name: 'Retail & Local Shops',
+    title: 'Modern E-Commerce, WhatsApp Ordering & Billing',
+    desc: 'Turn local shoppers into loyal online buyers with a mobile-friendly catalog, WhatsApp checkout, and instant receipt generation.',
+    highlights: [
+      'WhatsApp Order Placement & Customer Receipts',
+      'Automated Inventory & Invoicing System',
+      'Google Maps & Local Search Optimization',
+      'Mobile-Friendly Product Catalog'
+    ],
+    cta: 'Launch Your Online Shop'
+  },
+  {
+    id: 'services',
+    icon: '🔧',
+    name: 'Local Services & Contractors',
+    title: 'Instant Online Booking & Lead Quote Assistant',
+    desc: 'Never lose a client call again. Allow customers to book appointments, request price estimates, and receive SMS confirmations 24/7.',
+    highlights: [
+      '24/7 Automated Appointment Booking',
+      'Instant Quote Estimator for Clients',
+      'Google Review Booster & Rating Tools',
+      'High-Converting Mobile Service Site'
+    ],
+    cta: 'Get More Local Clients'
+  },
+  {
+    id: 'health',
+    icon: '🩺',
+    name: 'Clinics & Healthcare',
+    title: 'Patient Scheduling, Digital Records & Reminders',
+    desc: 'Reduce no-shows and streamline patient intake with automated WhatsApp appointment reminders and secure digital record forms.',
+    highlights: [
+      'Automated Patient Appointment Reminders',
+      'Digital Intake Forms (No Paperwork Needed)',
+      'Clean Clinic Website with Service Directory',
+      'Privacy & Security Compliant Systems'
+    ],
+    cta: 'Upgrade Your Clinic Tech'
+  },
+  {
+    id: 'dining',
+    icon: '☕',
+    name: 'Restaurants & Cafes',
+    title: 'QR Code Menus, Direct Ordering & Loyalty',
+    desc: 'Avoid heavy 30% delivery app commissions with your own branded QR menu, direct online table ordering, and loyalty rewards.',
+    highlights: [
+      'Digital QR Code Table Menus',
+      '0% Commission Direct Online Ordering',
+      'Customer Loyalty Rewards Program',
+      'Automated Order Kitchen Display'
+    ],
+    cta: 'Start Direct Ordering'
+  },
+  {
+    id: 'agency',
+    icon: '💼',
+    name: 'Agencies & Consultants',
+    title: 'High-Impact Client Portals & Automated Billing',
+    desc: 'Position your business as a premium market leader with an ultra-sleek agency website, client project portal, and recurring billing.',
+    highlights: [
+      'Sleek Agency Showcase Website',
+      'Automated Client Proposal & Retainer Billing',
+      'Client Onboarding & Project Dashboard',
+      'AI Lead Qualification Chatbot'
+    ],
+    cta: 'Scale Your Agency'
+  }
+];
+
+(function renderIndustries() {
+  const tabsContainer = document.getElementById('industryTabs');
+  const displayContainer = document.getElementById('industryDisplay');
+  if(!tabsContainer || !displayContainer) return;
+  
+  let activeIdx = 0;
+  
+  function update() {
+    tabsContainer.innerHTML = industriesData.map((ind, i) => `
+      <button type="button" class="ind-tab ${i===activeIdx?'active':''}" data-idx="${i}">
+        ${ind.icon} ${ind.name}
+      </button>
+    `).join('');
+    
+    const curr = industriesData[activeIdx];
+    displayContainer.innerHTML = `
+      <div>
+        <div class="eyebrow">${curr.icon} ${curr.name}</div>
+        <h3 class="ind-title">${curr.title}</h3>
+        <p class="ind-desc">${curr.desc}</p>
+        <ul class="ind-highlights">
+          ${curr.highlights.map(h => `<li><span>✓</span> ${h}</li>`).join('')}
+        </ul>
+      </div>
+      <div class="ind-visual-box">
+        <h4>Ready to transform your ${curr.name.toLowerCase()}?</h4>
+        <p>Get a custom-built system ready in 7 to 14 days with zero tech skills needed.</p>
+        <a href="#contact" class="btn btn-primary">${curr.cta}</a>
+      </div>
+    `;
+    
+    tabsContainer.querySelectorAll('.ind-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeIdx = parseInt(btn.getAttribute('data-idx'));
+        update();
+      });
+    });
+  }
+  
+  update();
+})();
+
+/* ---------- WHY VISUAL (constellation) ---------- */
+(function(){
+  const w=340,h=340;
+  const pts = Array.from({length:16},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*2+1.5}));
+  let links='';
+  pts.forEach((p,i)=>{
+    pts.forEach((q,j)=>{
+      if(j>i){
+        const d=Math.hypot(p.x-q.x,p.y-q.y);
+        if(d<110){links+=`<line x1="${p.x}" y1="${p.y}" x2="${q.x}" y2="${q.y}" stroke="url(#lg)" stroke-width="0.6" opacity="0.5"/>`;}
+      }
+    });
+  });
+  const dots = pts.map(p=>`<circle cx="${p.x}" cy="${p.y}" r="${p.r}" fill="#22D3EE" opacity="0.85"><animate attributeName="opacity" values="0.3;1;0.3" dur="${3+Math.random()*3}s" repeatCount="indefinite"/></circle>`).join('');
+  document.getElementById('whyVisual').innerHTML = `
+  <svg viewBox="0 0 ${w} ${h}" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3B82F6"/><stop offset="55%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient></defs>
+    ${links}${dots}
+  </svg>`;
+})();
+
+/* ---------- PROCESS ---------- */
+const steps = [
+  {t:'Free Strategy Call', d:'Share your business goals and what you want to achieve.'},
+  {t:'Custom Business Roadmap', d:'We design the exact features tailored for your budget.'},
+  {t:'Visual Preview', d:'Review your mobile site & apps before we publish.'},
+  {t:'Development & Setup', d:'We build, integrate, and test everything for you.'},
+  {t:'Testing & Security', d:'Ensuring fast load times and clean mobile performance.'},
+  {t:'Launch in 14 Days', d:'Your new digital system goes live to get customers.'},
+  {t:'Continuous 24/7 Support', d:'We provide ongoing maintenance, updates & team training.'},
+];
+document.getElementById('processSteps').innerHTML = steps.map((s,i)=>`
+  <div class="process-step">
+    <div class="process-node"></div>
+    <span class="step-tag">0${i+1}</span>
+    <h4>${s.t}</h4>
+    <p>${s.d}</p>
+  </div>`).join('');
+const processIO = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ 
+    if(e.isIntersecting){ 
+      const fillEl = document.getElementById('processFill');
+      if (fillEl) {
+        fillEl.style.transform = window.innerWidth <= 1000 ? 'scaleY(1)' : 'scaleX(1)';
+      }
+      processIO.disconnect(); 
+    } 
+  });
+},{threshold:0.2});
+processIO.observe(document.getElementById('processTrack'));
+
+/* ---------- STACK ---------- */
+const stack = [
+  {cat:'Frontend', items:['React & Next.js','Vue','TypeScript','Tailwind CSS']},
+  {cat:'Backend', items:['Node.js','Python / Django','Go','GraphQL & REST']},
+  {cat:'Mobile', items:['React Native','Flutter','Swift','Kotlin']},
+  {cat:'AI', items:['LLM integration','Workflow automation','Computer vision','Predictive models']},
+  {cat:'Cloud', items:['AWS','Google Cloud','Azure','Serverless']},
+  {cat:'Databases', items:['PostgreSQL','MongoDB','Redis','Elasticsearch']},
+  {cat:'DevOps', items:['Docker & Kubernetes','CI/CD pipelines','Terraform','Monitoring & logging']},
+  {cat:'QA & Testing', items:['Automated test suites','Load & performance testing','Security audits','Manual QA']},
+];
+document.getElementById('stackGrid').innerHTML = stack.map(s=>`
+  <div class="stack-cat">
+    <h4>${s.cat}</h4>
+    <ul>${s.items.map(i=>`<li>${i}</li>`).join('')}</ul>
+  </div>`).join('');
+
+/* ---------- FAQ ---------- */
+const faqs = [
+  {q:'What industries do you work with?', a:"We work across sectors — retail, healthcare, fintech, logistics, and B2B SaaS among them. Our process adapts to your industry's specific constraints rather than forcing a one-size-fits-all template."},
+  {q:'Do you develop custom software?', a:'Yes. Custom software is core to what we do, from internal operational tools to full customer-facing platforms, built specifically around your workflows.'},
+  {q:'Can you modernize our existing systems?', a:'Absolutely. We regularly assess legacy systems and plan phased modernization that minimizes disruption to day-to-day operations.'},
+  {q:'Do you provide ongoing support?', a:'Every engagement includes an option for continuous support and maintenance after launch, so your systems keep pace with your business.'},
+  {q:'How does your development process work?', a:'We move through Discovery, Strategy, Design, Development, Testing, Deployment, and Continuous Support — with visible progress and direct access to the team at every stage.'},
+];
+document.getElementById('faqList').innerHTML = faqs.map((f,i)=>`
+  <div class="faq-item" data-i="${i}">
+    <button class="faq-q"><span>${f.q}</span><span class="plus"></span></button>
+    <div class="faq-a"><p>${f.a}</p></div>
+  </div>`).join('');
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  q.addEventListener('click', ()=>{
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open'); o.querySelector('.faq-a').style.maxHeight=null;});
+    if(!isOpen){ item.classList.add('open'); a.style.maxHeight = a.scrollHeight+'px'; }
+  });
+});
+
+/* ---------- PRICING ---------- */
+const plans = [
+  {name:'Starter', tag:'For small businesses launching their first digital system', price:'₹30,000+', feats:['Business requirement analysis','Basic website or CRM setup','1 core workflow automation','Standard QA testing','30 days support'], cta:'Get Started'},
+  {name:'Growth', tag:'For growing companies needing connected operations', price:'₹80,000+', feats:['Custom ERP / payroll / inventory modules','Multi-user access & role-based permissions','Dashboard reporting','API integrations','Ongoing support & maintenance'], cta:'Get Started', featured:true},
+  {name:'Enterprise', tag:'For organizations modernizing at scale', price:'₹1,50,000+', feats:['End-to-end business software suite','Advanced automation & analytics','Custom security & compliance setup','Priority SLA support','Dedicated project team'], cta:'Talk to Sales'},
+  {name:'Customizable', tag:'For businesses with unique workflows or special requirements', price:'Custom Quote', feats:['Tailored features based on your process','Flexible modules for payroll, inventory, CRM, billing, and more','Scalable roadmap for future growth','Direct consultation with our team'], cta:'Contact Us'}
+];
+document.getElementById('pricingGrid').innerHTML = plans.map(p=>`
+  <div class="price-card glass reveal ${p.featured?'featured':''}">
+    ${p.featured?'<span class="price-badge">Most Popular</span>':''}
+    <h3>${p.name}</h3>
+    <p class="tag">${p.tag}</p>
+    <div class="price"><b>${p.price}</b></div>
+    <ul class="price-features">${p.feats.map(f=>`<li>${f}</li>`).join('')}</ul>
+    <a href="#contact" class="btn ${p.featured?'btn-primary':'btn-ghost'}">${p.cta}</a>
+  </div>`).join('');
+document.querySelectorAll('.pricing-grid .reveal').forEach(el=>io.observe(el));
+
+/* ---------- CONTACT INFO ---------- */
+const contactRows = [
+  {icon:'mail', h:'Email', p:'welyqo@outlook.com'},
+  {icon:'phone', h:'Phone', p:'+91 842 828 1491'},
+  {icon:'wa', h:'WhatsApp', p:'+91 842 828 1491'},
+  {icon:'clock', h:'Business Hours', p:'Mon – Fri, 9:00 AM – 6:00 PM (PST)'},
+];
+document.getElementById('contactInfo').innerHTML = contactRows.map(c=>`
+  <div class="contact-row">
+    <div class="ic">${svg(c.icon,16)}</div>
+    <div><h4>${c.h}</h4><p>${c.p}</p></div>
+  </div>`).join('');
+
+/* ---------- SOCIALS ---------- */
+const socialIcons = {
+  li:'<path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
+  tw:'<path d="M23 4.01c-.87.51-2.6 1.15-3.34 1.28C18.68 4.6 17.5 4 16.15 4c-2.6 0-4.7 2.24-4.7 5v1C7.7 10 4.67 8 2.2 5.36c-.4.7-.6 1.5-.6 2.36 0 1.72.8 3.24 2 4.14-.75 0-1.44-.24-2.05-.6v.06c0 2.4 1.6 4.4 3.7 4.86-.4.1-.8.16-1.24.16-.3 0-.6-.03-.9-.08.6 1.9 2.4 3.3 4.5 3.34A9.4 9.4 0 010 19.4a13.2 13.2 0 007.1 2.1c8.5 0 13.2-7.2 13.2-13.4v-.6c.9-.66 1.7-1.5 2.3-2.45z"/>',
+  ig:'<rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1"/>',
+};
+document.getElementById('socials').innerHTML = Object.keys(socialIcons).map(k=>`<a href="#" aria-label="${k}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="15" height="15">${socialIcons[k]}</svg></a>`).join('');
+
+/* ---------- LAUNCH AI BUTTON HELPER ---------- */
+const launchAi = document.getElementById('launchAi');
+if (launchAi) {
+  launchAi.addEventListener('click', (e) => {
+    e.preventDefault();
+    const panel = document.getElementById('assistantPanel');
+    if (panel) panel.classList.add('open');
+  });
+}
+
+/* ---------- HERO CANVAS (circuit network) ---------- */
+(function(){
+  const canvas = document.getElementById('hero-canvas');
+  const ctx = canvas.getContext('2d');
+  let w,h,nodes;
+  function resize(){
+    w = canvas.width = canvas.offsetWidth;
+    h = canvas.height = canvas.offsetHeight;
+  }
+  function init(){
+    resize();
+    const count = window.innerWidth<720 ? 30 : 60;
+    nodes = Array.from({length:count},()=>({
+      x:Math.random()*w, y:Math.random()*h,
+      vx:(Math.random()-0.5)*0.25, vy:(Math.random()-0.5)*0.25,
+      r:Math.random()*1.5+1
+    }));
+  }
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    nodes.forEach(n=>{
+      if(!reduced){
+        n.x+=n.vx; n.y+=n.vy;
+        if(n.x<0||n.x>w) n.vx*=-1;
+        if(n.y<0||n.y>h) n.vy*=-1;
+      }
+    });
+    for(let i=0;i<nodes.length;i++){
+      for(let j=i+1;j<nodes.length;j++){
+        const a=nodes[i], b=nodes[j];
+        const d = Math.hypot(a.x-b.x, a.y-b.y);
+        if(d<140){
+          ctx.strokeStyle = `rgba(139,146,246,${(1-d/140)*0.15})`;
+          ctx.lineWidth=0.6;
+          ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+        }
+      }
+    }
+    nodes.forEach(n=>{
+      ctx.fillStyle='rgba(34,211,238,0.55)';
+      ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fill();
+    });
+    if(!reduced) requestAnimationFrame(draw);
+  }
+  init();
+  window.addEventListener('resize', init);
+  draw();
+})();
+</script>
+</body>
+</html>
